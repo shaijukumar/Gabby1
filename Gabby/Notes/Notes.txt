@@ -1,0 +1,18 @@
+﻿===================================================
+Install-Package EntityFramework –IncludePrerelease 
+
+enable-migrations 
+-Create Model: 
+
+add-migration InitialModel 
+update-database
+===================================================
+
+===================================================
+add-migration db1 –force 
+update-database 
+===================================================
+
+http://localhost:58340/Files/Build Arabic words.pdf
+
+D:\Git\Gabby\Gabby\Files\Build Arabic words.pdf

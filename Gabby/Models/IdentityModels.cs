@@ -29,5 +29,9 @@ namespace Gabby.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<Gabby.Models.AluMember> AppLists { get; set; }
+
+        public System.Data.Entity.DbSet<Gabby.Models.FileUploadModel> FileUploadModels { get; set; }
     }
 }

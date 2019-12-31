@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Gabby.Models.FileUploadModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FileName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FilePath)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @{ var link = "Files/" + item.FileName;
+                var fileName = item.FileName; 
+             }
+ 
+            <a target="_blank" href="@link">@fileName</a>
+
+
+            @*@Html.DisplayFor(modelItem => item.FileName)*@
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FilePath)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>
